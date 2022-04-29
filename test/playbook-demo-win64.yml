@@ -1,12 +1,5 @@
 ---
 - hosts: all
   tasks:
-    - name: "Test win64 playbook demo"
-      uri:
-        url: "{{ integration_results_url }}"
-        return_content: true
-      register: results
-
-    - name: "Output test results"
-      debug:
-        msg: "{{ results.content }}"
+    - name: Test echo
+      shell: echo "For test playbook" > z:/test-win64.txt
