@@ -2,4 +2,4 @@
 - hosts: all
   tasks:
     - name: Test echo
-      shell: echo "For test playbook" > z:/test-win64.txt
+      shell: echo "For test playbook" > d:\test-win64.txt
