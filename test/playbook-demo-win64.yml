@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: host-win64
   tasks:
     - name: Test echo
-      shell: echo "For test playbook" > d:\test-win64.txt
+      shell: echo "For test win64 playbook" > d:\test-win64.txt
