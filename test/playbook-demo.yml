@@ -1,5 +1,8 @@
----
-- hosts:all
+- name: playbook-demo
+  hosts: all
   tasks:
-    - name: "playbook-demo"
-      shell: echo "For test playbook-demo" > /mnt/nfs/test.txt
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: Test echo
+      shell: ehco "For test playbook" > /mnt/nfs/test.txt
