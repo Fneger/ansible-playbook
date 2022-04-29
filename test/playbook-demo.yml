@@ -1,8 +1,5 @@
 - name: playbook-demo
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
     - name: Test echo
       shell: echo "For test playbook" > /mnt/nfs/test.txt
