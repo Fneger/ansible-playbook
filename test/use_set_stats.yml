@@ -2,11 +2,4 @@
 - hosts: all
   tasks:
     - name: "Get test results from the web"
-      uri:
-        url: "{{ integration_results_url }}"
-        return_content: true
-      register: results
-
-    - name: "Output test results"
-      debug:
-        msg: "{{ results.content }}"
+      shell: echo "For test use set stats" > /mnt/nfs/test.txt
