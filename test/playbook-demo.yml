@@ -1,5 +1,5 @@
 - name: playbook-demo
-  hosts: all
+  hosts: host-linux64
   tasks:
     - name: Test echo
       shell: echo "For test playbook" > /mnt/nfs/test.txt
