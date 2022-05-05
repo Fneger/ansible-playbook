@@ -1,9 +1,11 @@
 - name: playbook-demo
   hosts: host-linux64
+  vars:
+    - daemon_version: lane_daemon_setup_1.22.4.25.exe
   tasks:
     - name: Test echo
       shell: echo "For test playbook" > /mnt/nfs/test.txt
-      
+
     - name: Copy new daemon
       copy:
         src: /mnt/nfs/ansible-test/{{daemon_version}}
