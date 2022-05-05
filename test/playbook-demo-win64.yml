@@ -9,4 +9,4 @@
     - name: Copy new daemon
       win_copy:
         src: /mnt/nfs/ansible-test/{{daemon_version}}
-        dest: D:\ansible-test\daemon_setup.exe
+        dest: D:\ansible-test\lane_daemon_setup.exe
