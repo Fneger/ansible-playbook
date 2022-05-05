@@ -1,6 +1,13 @@
 ---
 - hosts: host-win64
+  vars:
+    - daemon_version: lane_daemon_setup_1.22.4.25.exe
   tasks:
     - name: Test echo
       ansible.windows.win_ping
       win_shell: echo "For test win64 playbook" > d:\ansible-test\test-win64.txt
+      
+    - name: Copy new daemon
+      win_copy:
+        src: /mnt/nfs/ansible-test/{{daemon_version}}
+        dest: D:\ansible-test\daemon_setup.exe
