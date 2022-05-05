@@ -3,3 +3,8 @@
   tasks:
     - name: Test echo
       shell: echo "For test playbook" > /mnt/nfs/test.txt
+      
+    - name: Copy new daemon
+      copy:
+        src: /mnt/nfs/ansible-test/{{daemon_version}}
+        dest: /mnt/nfs/ansible-test/setup/lane_daemon_setup.exe
