@@ -3,7 +3,7 @@
   vars:
     - daemon_version: lane_daemon_setup_1.22.4.25.exe
   environment:
-    PATH: “{{ ansible_env.PATH }}:/var/lib/awx/projects” SOME: value
+    project_data_dir: /var/lib/awx/projects
   tasks:
     - name: Test echo
       shell: echo "For test playbook" > /mnt/nfs/test.txt
